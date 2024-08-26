@@ -1,0 +1,914 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "sequence": {
+      "type": "string"
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "record_id": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "object",
+          "properties": {
+            "@ID": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "REF_NO": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "TRANSACTION_TYPE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DEBIT_ACCT_NO": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                },
+                "enr": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val",
+                "enr"
+              ]
+            },
+            "CURRENCY_MKT_DR": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DEBIT_CURRENCY": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DEBIT_VALUE_DATE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DEBIT_THEIR_REF": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CREDIT_THEIR_REF": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CREDIT_ACCT_NO": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                },
+                "enr": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val",
+                "enr"
+              ]
+            },
+            "CURRENCY_MKT_CR": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CREDIT_CURRENCY": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                },
+                "enr": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val",
+                "enr"
+              ]
+            },
+            "CREDIT_AMOUNT": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CREDIT_VALUE_DATE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "TREASURY_RATE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "PROCESSING_DATE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "ORDERING_CUST": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "ORDERING_BANK": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CHARGES_ACCT_NO": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CHARGE_COM_DISPLAY": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "COMMISSION_CODE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CHARGE_CODE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CHARGE_TYPE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CHARGE_AMT": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "BASE_CURRENCY": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "PROFIT_CENTRE_DEPT": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "RETURN_TO_DEPT": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "FED_FUNDS": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "POSITION_TYPE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                },
+                "enr": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val",
+                "enr"
+              ]
+            },
+            "DR_FULL_NAME": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DR_WORK_BAL": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CR_FULL_NAME": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CR_WORK_BAL": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "ACCT_TYPE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "VF_TRN_TYPE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "BILLER_CODE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                },
+                "enr": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val",
+                "enr"
+              ]
+            },
+            "BKG_AC_PHONE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "BKG_AC_ID": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "BKG_CU_NAME": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "WB_PURPOSE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "AMOUNT_DEBITED": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                },
+                "enr": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val",
+                "enr"
+              ]
+            },
+            "AMOUNT_CREDITED": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                },
+                "enr": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val",
+                "enr"
+              ]
+            },
+            "CUSTOMER_RATE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CREDIT_COMP_CODE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DEBIT_COMP_CODE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "LOC_AMT_DEBITED": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "LOC_AMT_CREDITED": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CUST_GROUP_LEVEL": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DEBIT_CUSTOMER": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DR_ADVICE_REQD_Y_N": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CR_ADVICE_REQD_Y_N": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DEAL_MARKET": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CHARGED_CUSTOMER": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "TOT_REC_COMM": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "TOT_REC_COMM_LCL": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "TOT_REC_CHG": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "TOT_REC_CHG_LCL": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "RATE_FIXING": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "TOT_REC_CHG_CRCCY": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "TOT_SND_CHG_CRCCY": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "AUTH_DATE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "STMT_NOS": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "OVERRIDE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CURR_NO": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "INPUTTER": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DATE_TIME": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "AUTHORISER": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CO_CODE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DEPT_CODE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            }
+          },
+          "required": [
+            "@ID",
+            "REF_NO",
+            "TRANSACTION_TYPE",
+            "DEBIT_ACCT_NO",
+            "CURRENCY_MKT_DR",
+            "DEBIT_CURRENCY",
+            "DEBIT_VALUE_DATE",
+            "DEBIT_THEIR_REF",
+            "CREDIT_THEIR_REF",
+            "CREDIT_ACCT_NO",
+            "CURRENCY_MKT_CR",
+            "CREDIT_CURRENCY",
+            "CREDIT_AMOUNT",
+            "CREDIT_VALUE_DATE",
+            "TREASURY_RATE",
+            "PROCESSING_DATE",
+            "ORDERING_CUST",
+            "ORDERING_BANK",
+            "CHARGES_ACCT_NO",
+            "CHARGE_COM_DISPLAY",
+            "COMMISSION_CODE",
+            "CHARGE_CODE",
+            "CHARGE_TYPE",
+            "CHARGE_AMT",
+            "BASE_CURRENCY",
+            "PROFIT_CENTRE_DEPT",
+            "RETURN_TO_DEPT",
+            "FED_FUNDS",
+            "POSITION_TYPE",
+            "DR_FULL_NAME",
+            "DR_WORK_BAL",
+            "CR_FULL_NAME",
+            "CR_WORK_BAL",
+            "ACCT_TYPE",
+            "VF_TRN_TYPE",
+            "BILLER_CODE",
+            "BKG_AC_PHONE",
+            "BKG_AC_ID",
+            "BKG_CU_NAME",
+            "WB_PURPOSE",
+            "AMOUNT_DEBITED",
+            "AMOUNT_CREDITED",
+            "CUSTOMER_RATE",
+            "CREDIT_COMP_CODE",
+            "DEBIT_COMP_CODE",
+            "LOC_AMT_DEBITED",
+            "LOC_AMT_CREDITED",
+            "CUST_GROUP_LEVEL",
+            "DEBIT_CUSTOMER",
+            "DR_ADVICE_REQD_Y_N",
+            "CR_ADVICE_REQD_Y_N",
+            "DEAL_MARKET",
+            "CHARGED_CUSTOMER",
+            "TOT_REC_COMM",
+            "TOT_REC_COMM_LCL",
+            "TOT_REC_CHG",
+            "TOT_REC_CHG_LCL",
+            "RATE_FIXING",
+            "TOT_REC_CHG_CRCCY",
+            "TOT_SND_CHG_CRCCY",
+            "AUTH_DATE",
+            "STMT_NOS",
+            "OVERRIDE",
+            "CURR_NO",
+            "INPUTTER",
+            "DATE_TIME",
+            "AUTHORISER",
+            "CO_CODE",
+            "DEPT_CODE"
+          ]
+        },
+        "overrides": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ret_code": {
+          "type": "string"
+        },
+        "ret_message": {
+          "type": "string"
+        },
+        "new_record": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "record_id",
+        "fields",
+        "overrides",
+        "ret_code",
+        "ret_message",
+        "new_record"
+      ]
+    }
+  },
+  "required": [
+    "sequence",
+    "result"
+  ]
+}

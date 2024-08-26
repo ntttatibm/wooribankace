@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><MessageAssembly iib:parser="GENERICROOT" xmlns:iib="http://com.ibm.iib/lt/1.0">
+    <version xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">1</version>
+    <checkpoint>
+        <messageId xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">00008B98-66BEE812-00000001</messageId>
+        <propagationCount xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">1</propagationCount>
+        <nodeCallDepth xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">2</nodeCallDepth>
+        <timestamp xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="TIMESTAMP">2024-08-16 05:48:02.658</timestamp>
+        <source>
+            <name xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Construct Request</name>
+            <identifier xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">IncomingAccountInquiry#FCMComposite_1_2</identifier>
+            <type xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">ComIbmComputeNode</type>
+            <terminal xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">out</terminal>
+            <nodePath>
+                <application xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Woori - Integration</application>
+                <messageFlow xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">IncomingAccountInquiry</messageFlow>
+                <node xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Construct Request</node>
+            </nodePath>
+            <inputNode xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="BOOLEAN">FALSE</inputNode>
+        </source>
+        <target>
+            <name xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">HTTP Reply</name>
+            <identifier xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">IncomingAccountInquiry#FCMComposite_1_6</identifier>
+            <type xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">ComIbmWSReplyNode</type>
+            <terminal xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">in</terminal>
+            <nodePath>
+                <application xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Woori - Integration</application>
+                <messageFlow xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">IncomingAccountInquiry</messageFlow>
+                <node xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">HTTP Reply</node>
+            </nodePath>
+        </target>
+    </checkpoint>
+    <environment/>
+    <localEnvironment xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="MQROOT">
+        <Destination>
+            <HTTP>
+                <RequestIdentifier iib:valueType="BLOB">455648540000000000000000e288ba594c55000000000000</RequestIdentifier>
+            </HTTP>
+        </Destination>
+    </localEnvironment>
+    <exceptionList/>
+    <message xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="WSRoot">
+        <Properties iib:parser="MQPROPERTYPARSER">
+            <MessageSet iib:elementType="0x03000000"/>
+            <MessageType iib:elementType="0x03000000"/>
+            <MessageFormat iib:elementType="0x03000000"/>
+            <Encoding iib:elementType="0x03000000"/>
+            <CodedCharSetId iib:elementType="0x03000000"/>
+            <Transactional iib:elementType="0x03000000"/>
+            <Persistence iib:elementType="0x03000000"/>
+            <CreationTime iib:elementType="0x03000000"/>
+            <ExpirationTime iib:elementType="0x03000000"/>
+            <Priority iib:elementType="0x03000000"/>
+            <ReplyIdentifier iib:elementType="0x03000000"/>
+            <ReplyProtocol iib:valueType="CHARACTER">SOAP-HTTP</ReplyProtocol>
+            <Topic iib:elementType="0x03000000"/>
+            <ContentType iib:elementType="0x03000000"/>
+            <IdentitySourceType iib:elementType="0x03000000"/>
+            <IdentitySourceToken iib:elementType="0x03000000"/>
+            <IdentitySourcePassword iib:elementType="0x03000000"/>
+            <IdentitySourceIssuedBy iib:elementType="0x03000000"/>
+            <IdentityMappedType iib:elementType="0x03000000"/>
+            <IdentityMappedToken iib:elementType="0x03000000"/>
+            <IdentityMappedPassword iib:elementType="0x03000000"/>
+            <IdentityMappedIssuedBy iib:elementType="0x03000000"/>
+        </Properties>
+        <JSON iib:parser="json">
+            <Data>
+                <sequence iib:valueType="CHARACTER">123456</sequence>
+                <action iib:valueType="CHARACTER">REPORT</action>
+                <un iib:valueType="CHARACTER">RATANAK.L</un>
+                <pw iib:valueType="CHARACTER">ASDFgh45</pw>
+                <parameters>
+                    <type iib:valueType="CHARACTER">ENQUIRY</type>
+                    <enquiry.format iib:valueType="CHARACTER">RAW</enquiry.format>
+                    <id iib:valueType="CHARACTER">WB.BK.ACCOUNT.INFO</id>
+                    <selection iib:elementType="0x01001000">
+                        <Item iib:elementType="0x01001000">
+                            <Item iib:valueType="CHARACTER">@ID</Item>
+                        </Item>
+                        <Item iib:elementType="0x01001000">
+                            <Item iib:valueType="CHARACTER">EQ</Item>
+                        </Item>
+                        <Item iib:elementType="0x01001000">
+                            <Item iib:valueType="CHARACTER">251111168</Item>
+                        </Item>
+                    </selection>
+                </parameters>
+            </Data>
+        </JSON>
+    </message>
+</MessageAssembly>

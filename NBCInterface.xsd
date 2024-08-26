@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://webservice.nbc.org.kh/" targetNamespace="http://webservice.nbc.org.kh/">
+  <include schemaLocation="NBCInterface_InlineSchema1.xsd"/>
+  
+  <!-- BEGIN Global group petaining to all wsdl:message definitions -->
+  
+  <!-- END Global group -->
+  
+  <!-- BEGIN Message Definitions for the wsdl:operations  -->
+  
+  <!-- END Message Definitions -->
+  
+</schema>

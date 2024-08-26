@@ -1,0 +1,49 @@
+
+
+Importing file: C:\Users\ZZ00JM852\Downloads\Telegram Desktop\NBCInterface.wsdl
+
+The WSDL import will proceed with bindings NBCInterfaceSoap11.
+Creating wsdl schema document for file:///C:/Users/ZZ00JM852/Downloads/Telegram Desktop/NBCInterface.wsdl.
+Parsing wsdl binding {http://webservice.nbc.org.kh/}NBCInterfaceSoap11.
+Parsing wsdl binding input makeFullFundTransfer.
+Parsing wsdl binding output makeFullFundTransfer.
+Parsing wsdl binding input getOutgoingTransactionByPmtInfId.
+Parsing wsdl binding output getOutgoingTransactionByPmtInfId.
+Parsing wsdl binding input getAccountInquiry.
+Parsing wsdl binding output getAccountInquiry.
+Parsing wsdl binding input makeAcknowledgement.
+Parsing wsdl binding output makeAcknowledgement.
+Parsing wsdl binding input makeReverseTransaction.
+Parsing wsdl binding output makeReverseTransaction.
+Parsing wsdl binding input getIncomingTransaction.
+Parsing wsdl binding output getIncomingTransaction.
+Parsing wsdl binding input getOutgoingTransaction.
+Parsing wsdl binding output getOutgoingTransaction.
+Parsing wsdl binding input makeWalletTransfer.
+Parsing wsdl binding output makeWalletTransfer.
+Parsing wsdl binding input getOutgoingTransactionByExtRef.
+Parsing wsdl binding output getOutgoingTransactionByExtRef.
+Parsing wsdl binding input makeQRWalletTransfer.
+Parsing wsdl binding output makeQRWalletTransfer.
+Processing doc style for operation makeFullFundTransfer.
+Processing doc style for operation getOutgoingTransactionByPmtInfId.
+Processing doc style for operation getAccountInquiry.
+Processing doc style for operation makeAcknowledgement.
+Processing doc style for operation makeReverseTransaction.
+Processing doc style for operation getIncomingTransaction.
+Processing doc style for operation getOutgoingTransaction.
+Processing doc style for operation makeWalletTransfer.
+Processing doc style for operation getOutgoingTransactionByExtRef.
+Processing doc style for operation makeQRWalletTransfer.
+Populating WSDL schema NBCInterface.xsd.
+Creating file NBCInterface.xsd in the workspace.
+Creating file NBCInterface_InlineSchema1.xsd in the workspace.
+Copying source WSDL NBCInterface.wsdl to NBCInterface.wsdl.
+
+Elapsed time processing this message definition file: 0.55 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

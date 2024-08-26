@@ -1,0 +1,58 @@
+
+
+CREATE COMPUTE MODULE WalletTransfer_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL ConstructMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE ConstructMessage() BEGIN
+		-- SET OutputRoot = InputRoot;
+		DECLARE castTime TIME;
+		SET castTime = CAST (CURRENT_DATE AS DATE FORMAT 'YYYYMMDD');
+
+		SET OutputRoot.JSON.Data.sequence = '123456';
+		SET OutputRoot.JSON.Data.action = 'OFS';
+		SET OutputRoot.JSON.Data.un = 'XXXXX';
+		SET OutputRoot.JSON.Data.pw = 'XXXXX';
+		SET OutputRoot.JSON.Data.parameters.application = 'FUNDS.TRANSFER,WB.MB.QR.CODE';
+		SET OutputRoot.JSON.Data.parameters.function = 'I';
+		SET OutputRoot.JSON.Data.parameters.operation = 'PROCESS';
+		SET OutputRoot.JSON.Data.parameters."no.of.auth" = '0';
+		SET OutputRoot.JSON.Data.parameters."record.id" = '';
+		SET OutputRoot.JSON.Data.parameters.company = 'KH0010001';
+		
+		SET OutputRoot.JSON.Data.parameters.fields."DEBIT.ACCT.NO" = InputRoot.JSON.Data.senderAccount;
+		SET OutputRoot.JSON.Data.parameters.fields."DEBIT.VALUE.DATE" = castTime;
+		SET OutputRoot.JSON.Data.parameters.fields."DEBIT.THEIR.REF" = 'MB-Bakong';
+		SET OutputRoot.JSON.Data.parameters.fields."CREDIT.THEIR.REF" = 'MB-Bakong';
+		SET OutputRoot.JSON.Data.parameters.fields."CREDIT.ACCT.NO" = 'KHR1582900010001';
+		SET OutputRoot.JSON.Data.parameters.fields."CREDIT.CURRENCY" = 'KHR';
+		SET OutputRoot.JSON.Data.parameters.fields."CREDIT.VALUE.DATE" = castTime;
+		SET OutputRoot.JSON.Data.parameters.fields."BKG.AC.PHONE" = 'veasnauch@wbfm';
+		SET OutputRoot.JSON.Data.parameters.fields."BKG.AC.ID" = 'veasnauch@wbfm';
+		SET OutputRoot.JSON.Data.parameters.fields."BKG.CU.NAME" = 'Not Verified';
+		SET OutputRoot.JSON.Data.parameters.fields."CREDIT.AMOUNT" = '10000';
+		SET OutputRoot.JSON.Data.parameters.fields."CHARGE.AMT" = 'USD0.0';
+		SET OutputRoot.JSON.Data.parameters.fields."CHARGES.ACCT.NO" = '25650999';
+		SET OutputRoot.JSON.Data.parameters.fields."VF.TRN.TYPE" = 'MTB';
+		SET OutputRoot.JSON.Data.parameters.fields."BILLER.CODE" = 'BKN001_001';
+		SET OutputRoot.JSON.Data.parameters.fields."WB.QR.MCHT.TYPE" = '';
+		SET OutputRoot.JSON.Data.parameters.fields."TRANSACTION.TYPE" = '';
+		SET OutputRoot.JSON.Data.parameters.fields."BK.ORG.NAME" = '';
+		SET OutputRoot.JSON.Data.parameters.fields."WB.PURPOSE" = 'BUS.PUR';
+		SET OutputRoot.JSON.Data.parameters.fields."WB.PURPOSE.OTH" = '';
+	END;
+END MODULE;

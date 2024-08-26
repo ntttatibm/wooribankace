@@ -1,0 +1,50 @@
+CREATE COMPUTE MODULE WalletInquiry_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL ParseResponse();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+			DECLARE I INTEGER 1;
+			DECLARE J INTEGER;
+			SET J = CARDINALITY(InputRoot.*[]);
+			WHILE I < J DO
+				SET OutputRoot.*[I] = InputRoot.*[I];
+				SET I = I + 1;
+			END WHILE;
+		END;
+	
+	CREATE PROCEDURE ParseResponse() BEGIN
+				
+--	 	SET OutputRoot = InputRoot;
+		DECLARE ns2 NAMESPACE 'http://webservice.nbc.org.kh/';
+		DECLARE soapenv NAMESPACE 'http://schemas.xmlsoap.org/soap/envelope/';
+		
+		
+--		DECLARE bodyBlob BLOB CAST (InputRoot.XMLNSC.soapenv:Envelope.soapenv:Body.ns2:getAccountInquiryResponse.ns2:return AS BLOB CCSID 1200);
+--		CREATE LASTCHILD OF OutputRoot DOMAIN ('XMLNSC') PARSE (bodyBlob CCSID 1200 ENCODING 0 SET '' FORMAT 'XML' TYPE 'UTF-8');
+
+		DECLARE ExtractedXML CHAR;
+		DECLARE xmlContent CHAR;
+		
+		SET ExtractedXML = FIELDVALUE(InputRoot.XMLNSC.soapenv:Envelope.soapenv:Body.ns2:getAccountInquiryResponse.ns2:return);
+		
+		SET xmlContent = REPLACE(ExtractedXML, '&lt;', '<');
+		SET xmlContent = REPLACE(xmlContent, '&gt;', '>');
+		SET xmlContent = REPLACE(xmlContent, '&quot;', '"');
+		SET xmlContent = REPLACE(xmlContent, '&amp;', '&');
+		
+		CREATE LASTCHILD OF OutputRoot DOMAIN('XMLNSC') PARSE(xmlContent CCSID 1200 ENCODING 0 SET '' FORMAT 'XML' TYPE 'UTF-8');
+
+
+--		SET OutputRoot.JSON.Data.BizDate = OutputRoot.XMLNSC.Document.BizDate;
+--		SET OutputRoot.JSON.Data.BizTime = soapPayload.BizTime;
+--		SET OutputRoot.JSON.Data.myBankID = soapPayload.myBankID;
+--		SET OutputRoot.JSON.Data.BakongAccountUSD = soapPayload.BakongAccountUSD;
+--		SET OutputRoot.JSON.Data.BakongAccountKHR = soapPayload.BakongAccountKHR;
+--		SET OutputRoot.JSON.Data.BakongBalanceUSD = soapPayload.BakongBalanceUSD;
+--		SET OutputRoot.JSON.Data.BakongBalanceKHR = soapPayload.BakongBalanceKHR;
+	END;
+END MODULE;

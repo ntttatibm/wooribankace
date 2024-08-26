@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.nbc.org.kh/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:getAccountInquiry>
+         <!--Optional:-->
+         <web:cm_user_name>XXXXX</web:cm_user_name>
+         <!--Optional:-->
+         <web:cm_password>XXXXX</web:cm_password>
+         <web:participant_code>WBFMKHPPXXX</web:participant_code>
+      </web:getAccountInquiry>
+   </soapenv:Body>
+</soapenv:Envelope>

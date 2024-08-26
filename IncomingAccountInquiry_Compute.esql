@@ -1,0 +1,58 @@
+CREATE COMPUTE MODULE IncomingAccountInquiry_Compute
+  CREATE FUNCTION Main() RETURNS BOOLEAN
+  BEGIN
+    -- CALL CopyMessageHeaders();
+    CALL ConstructRequest();
+    RETURN TRUE;
+  END;
+ 
+  CREATE PROCEDURE CopyMessageHeaders() BEGIN
+    DECLARE I INTEGER 1;
+    DECLARE J INTEGER;
+    SET J = CARDINALITY(InputRoot.*[]);
+    WHILE I < J DO
+      SET OutputRoot.*[I] = InputRoot.*[I];
+      SET I = I + 1;
+    END WHILE;
+  END;
+ 
+--{
+--    "sequence": "123456",
+--    "action": "REPORT",
+--    "un": "RATANAK.L",
+--    "pw": "ASDFgh45",
+--    "parameters": {
+--        "type": "ENQUIRY",
+--        "enquiry.format": "RAW",
+--        "id": "WB.BK.ACCOUNT.INFO",
+--        "selection": [
+--            [ "@ID" ],
+--            [ "EQ" ],
+--            [ "25111168"]
+--        ]
+--    }
+--}
+ 
+  CREATE PROCEDURE ConstructRequest() BEGIN
+--     SET OutputRoot = InputRoot;
+    SET OutputRoot.JSON.Data.sequence = '123456';
+    SET OutputRoot.JSON.Data.action = 'REPORT';
+    SET OutputRoot.JSON.Data.un = 'RATANAK.L';
+    SET OutputRoot.JSON.Data.pw = 'ASDFgh45';
+    SET OutputRoot.JSON.Data.parameters.type = 'ENQUIRY';
+    SET OutputRoot.JSON.Data.parameters."enquiry.format" = 'RAW';
+    SET OutputRoot.JSON.Data.parameters.id = 'WB.BK.ACCOUNT.INFO';
+    
+    -- Set selection as an array of arrays
+	CREATE FIELD OutputRoot.JSON.Data.parameters.selection IDENTITY(JSON.Array)selection;
+	CREATE FIELD OutputRoot.JSON.Data.parameters.selection.Item[1] IDENTITY(JSON.Array)Item[1];
+    CREATE LASTCHILD OF OutputRoot.JSON.Data.parameters.selection.Item[1] TYPE NameValue NAME 'Item' VALUE '@ID';
+    CREATE FIELD OutputRoot.JSON.Data.parameters.selection.Item[2] IDENTITY(JSON.Array)Item[2];
+	CREATE LASTCHILD OF OutputRoot.JSON.Data.parameters.selection.Item[2] TYPE NameValue NAME 'Item' VALUE 'EQ';
+    CREATE FIELD OutputRoot.JSON.Data.parameters.selection.Item[3] IDENTITY(JSON.Array)Item[3];
+	CREATE LASTCHILD OF OutputRoot.JSON.Data.parameters.selection.Item[3] TYPE NameValue NAME 'Item' VALUE InputRoot.JSON.Data.account_no;
+	
+	
+
+	END;
+END MODULE;

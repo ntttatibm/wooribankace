@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:sch="http://webservice.nbc.org.kh/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://webservice.nbc.org.kh/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://webservice.nbc.org.kh/">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="NBCInterface_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="NBCInterfaceSoap11" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+    
+  <wsdl:types>
+        
+          
+    <xsd:schema xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://webservice.nbc.org.kh/" version="1.0">
+      
+      <xsd:include schemaLocation="NBCInterface_InlineSchema1.xsd"/>
+    </xsd:schema>
+        
+  </wsdl:types>
+    
+  <wsdl:message name="makeFullFundTransfer">
+        
+    <wsdl:part element="sch:makeFullFundTransfer" name="makeFullFundTransfer">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="getOutgoingTransactionByPmtInfId">
+        
+    <wsdl:part element="sch:getOutgoingTransactionByPmtInfId" name="getOutgoingTransactionByPmtInfId">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="getAccountInquiry">
+        
+    <wsdl:part element="sch:getAccountInquiry" name="getAccountInquiry">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="makeAcknowledgement">
+        
+    <wsdl:part element="sch:makeAcknowledgement" name="makeAcknowledgement">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="makeReverseTransaction">
+        
+    <wsdl:part element="sch:makeReverseTransaction" name="makeReverseTransaction">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="getIncomingTransaction">
+        
+    <wsdl:part element="sch:getIncomingTransaction" name="getIncomingTransaction">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="makeFullFundTransferResponse">
+        
+    <wsdl:part element="sch:makeFullFundTransferResponse" name="makeFullFundTransferResponse">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="getIncomingTransactionResponse">
+        
+    <wsdl:part element="sch:getIncomingTransactionResponse" name="getIncomingTransactionResponse">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="makeReverseTransactionResponse">
+        
+    <wsdl:part element="sch:makeReverseTransactionResponse" name="makeReverseTransactionResponse">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="getOutgoingTransaction">
+        
+    <wsdl:part element="sch:getOutgoingTransaction" name="getOutgoingTransaction">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="makeWalletTransferResponse">
+        
+    <wsdl:part element="sch:makeWalletTransferResponse" name="makeWalletTransferResponse">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="getOutgoingTransactionByExtRef">
+        
+    <wsdl:part element="sch:getOutgoingTransactionByExtRef" name="getOutgoingTransactionByExtRef">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="getOutgoingTransactionByPmtInfIdResponse">
+        
+    <wsdl:part element="sch:getOutgoingTransactionByPmtInfIdResponse" name="getOutgoingTransactionByPmtInfIdResponse">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="makeAcknowledgementResponse">
+        
+    <wsdl:part element="sch:makeAcknowledgementResponse" name="makeAcknowledgementResponse">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="getOutgoingTransactionByExtRefResponse">
+        
+    <wsdl:part element="sch:getOutgoingTransactionByExtRefResponse" name="getOutgoingTransactionByExtRefResponse">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="getOutgoingTransactionResponse">
+        
+    <wsdl:part element="sch:getOutgoingTransactionResponse" name="getOutgoingTransactionResponse">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="makeWalletTransfer">
+        
+    <wsdl:part element="sch:makeWalletTransfer" name="makeWalletTransfer">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="makeQRWalletTransfer">
+        
+    <wsdl:part element="sch:makeQRWalletTransfer" name="makeQRWalletTransfer">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="makeQRWalletTransferResponse">
+        
+    <wsdl:part element="sch:makeQRWalletTransferResponse" name="makeQRWalletTransferResponse">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="getAccountInquiryResponse">
+        
+    <wsdl:part element="sch:getAccountInquiryResponse" name="getAccountInquiryResponse">
+    </wsdl:part>
+      
+  </wsdl:message>
+    
+  <wsdl:portType name="NBCInterface">
+        
+    <wsdl:operation name="makeFullFundTransfer">
+            
+      <wsdl:input message="sch:makeFullFundTransfer" name="makeFullFundTransfer">
+    </wsdl:input>
+            
+      <wsdl:output message="sch:makeFullFundTransferResponse" name="makeFullFundTransferResponse">
+    </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="getOutgoingTransactionByPmtInfId">
+            
+      <wsdl:input message="sch:getOutgoingTransactionByPmtInfId" name="getOutgoingTransactionByPmtInfId">
+    </wsdl:input>
+            
+      <wsdl:output message="sch:getOutgoingTransactionByPmtInfIdResponse" name="getOutgoingTransactionByPmtInfIdResponse">
+    </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="getAccountInquiry">
+            
+      <wsdl:input message="sch:getAccountInquiry" name="getAccountInquiry">
+    </wsdl:input>
+            
+      <wsdl:output message="sch:getAccountInquiryResponse" name="getAccountInquiryResponse">
+    </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="makeAcknowledgement">
+            
+      <wsdl:input message="sch:makeAcknowledgement" name="makeAcknowledgement">
+    </wsdl:input>
+            
+      <wsdl:output message="sch:makeAcknowledgementResponse" name="makeAcknowledgementResponse">
+    </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="makeReverseTransaction">
+            
+      <wsdl:input message="sch:makeReverseTransaction" name="makeReverseTransaction">
+    </wsdl:input>
+            
+      <wsdl:output message="sch:makeReverseTransactionResponse" name="makeReverseTransactionResponse">
+    </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="getIncomingTransaction">
+            
+      <wsdl:input message="sch:getIncomingTransaction" name="getIncomingTransaction">
+    </wsdl:input>
+            
+      <wsdl:output message="sch:getIncomingTransactionResponse" name="getIncomingTransactionResponse">
+    </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="getOutgoingTransaction">
+            
+      <wsdl:input message="sch:getOutgoingTransaction" name="getOutgoingTransaction">
+    </wsdl:input>
+            
+      <wsdl:output message="sch:getOutgoingTransactionResponse" name="getOutgoingTransactionResponse">
+    </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="makeWalletTransfer">
+            
+      <wsdl:input message="sch:makeWalletTransfer" name="makeWalletTransfer">
+    </wsdl:input>
+            
+      <wsdl:output message="sch:makeWalletTransferResponse" name="makeWalletTransferResponse">
+    </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="getOutgoingTransactionByExtRef">
+            
+      <wsdl:input message="sch:getOutgoingTransactionByExtRef" name="getOutgoingTransactionByExtRef">
+    </wsdl:input>
+            
+      <wsdl:output message="sch:getOutgoingTransactionByExtRefResponse" name="getOutgoingTransactionByExtRefResponse">
+    </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="makeQRWalletTransfer">
+            
+      <wsdl:input message="sch:makeQRWalletTransfer" name="makeQRWalletTransfer">
+    </wsdl:input>
+            
+      <wsdl:output message="sch:makeQRWalletTransferResponse" name="makeQRWalletTransferResponse">
+    </wsdl:output>
+          
+    </wsdl:operation>
+      
+  </wsdl:portType>
+    
+  <wsdl:binding name="NBCInterfaceSoap11" type="sch:NBCInterface">
+        
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        
+    <wsdl:operation name="makeFullFundTransfer">
+            
+      <soap:operation soapAction=""/>
+            
+      <wsdl:input name="makeFullFundTransfer">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output name="makeFullFundTransferResponse">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="getOutgoingTransactionByPmtInfId">
+            
+      <soap:operation soapAction=""/>
+            
+      <wsdl:input name="getOutgoingTransactionByPmtInfId">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output name="getOutgoingTransactionByPmtInfIdResponse">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="getAccountInquiry">
+            
+      <soap:operation soapAction=""/>
+            
+      <wsdl:input name="getAccountInquiry">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output name="getAccountInquiryResponse">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="makeAcknowledgement">
+            
+      <soap:operation soapAction=""/>
+            
+      <wsdl:input name="makeAcknowledgement">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output name="makeAcknowledgementResponse">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="makeReverseTransaction">
+            
+      <soap:operation soapAction=""/>
+            
+      <wsdl:input name="makeReverseTransaction">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output name="makeReverseTransactionResponse">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="getIncomingTransaction">
+            
+      <soap:operation soapAction=""/>
+            
+      <wsdl:input name="getIncomingTransaction">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output name="getIncomingTransactionResponse">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="getOutgoingTransaction">
+            
+      <soap:operation soapAction=""/>
+            
+      <wsdl:input name="getOutgoingTransaction">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output name="getOutgoingTransactionResponse">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="makeWalletTransfer">
+            
+      <soap:operation soapAction=""/>
+            
+      <wsdl:input name="makeWalletTransfer">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output name="makeWalletTransferResponse">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="getOutgoingTransactionByExtRef">
+            
+      <soap:operation soapAction=""/>
+            
+      <wsdl:input name="getOutgoingTransactionByExtRef">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output name="getOutgoingTransactionByExtRefResponse">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+        
+    <wsdl:operation name="makeQRWalletTransfer">
+            
+      <soap:operation soapAction=""/>
+            
+      <wsdl:input name="makeQRWalletTransfer">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output name="makeQRWalletTransferResponse">
+                
+        <soap:body use="literal"/>
+              
+      </wsdl:output>
+          
+    </wsdl:operation>
+      
+  </wsdl:binding>
+    
+  <wsdl:service name="NBCInterfaceService">
+        
+    <wsdl:port binding="sch:NBCInterfaceSoap11" name="NBCInterfaceSoap11">
+            
+      <soap:address location="http://bkgsitapp.wbfinance.com.kh:80/BakongWebService/NBCInterface"/>
+          
+    </wsdl:port>
+      
+  </wsdl:service>
+  
+</wsdl:definitions>

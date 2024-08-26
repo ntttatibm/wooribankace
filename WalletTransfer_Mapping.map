@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0">
+    <inlinedXMLSchema>
+        <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+    
+     
+         
+            
+   
+  <xsd:element name="senderAccountCcy" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="company" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="qrCode" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="merchantType" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="serviceId" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="senderName" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="fee_amount" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="fee_currency" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="purposeOther" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="purpose" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="tranCurrency" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="tranAmount" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="receiverName" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="receiverAccountId" nillable="true" type="xsd:string"/> 
+    
+     
+         
+    
+   
+  <xsd:element name="senderAccount" nillable="true" type="xsd:string"/> 
+    
+     
+     
+  
+ 
+</xsd:schema> 
+]]>
+    </inlinedXMLSchema>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var2"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var1"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="WalletTransfer_Mapping">
+        <input namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,LocalEnvironment,Properties)" var="ComIbmMessageAssembly_JSON">
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="senderAccount" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="receiverAccountId" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="receiverName" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="tranAmount" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="tranCurrency" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="purpose" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="purposeOther" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="fee_currency" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="fee_amount" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="senderName" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="serviceId" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="merchantType" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="qrCode" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="company" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="senderAccountCcy" ref="var2"/>
+        </input>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var1/mb:msg(JSON,assembly,JSON,LocalEnvironment,Properties)" var="ComIbmMessageAssembly_JSON1">
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON1/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var1"/>
+        </output>
+        <move>
+            <input path="$ComIbmMessageAssembly_JSON/Properties"/>
+            <output path="$ComIbmMessageAssembly_JSON1/Properties"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)"/>
+            <output path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_JSON/LocalEnvironment"/>
+            <output path="$ComIbmMessageAssembly_JSON1/LocalEnvironment"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

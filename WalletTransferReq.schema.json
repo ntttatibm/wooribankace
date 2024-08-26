@@ -1,0 +1,132 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "sequence": {
+        "type": "string"
+      },
+      "action": {
+        "type": "string"
+      },
+      "un": {
+        "type": "string"
+      },
+      "pw": {
+        "type": "string"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "application": {
+            "type": "string"
+          },
+          "function": {
+            "type": "string"
+          },
+          "operation": {
+            "type": "string"
+          },
+          "no.of.auth": {
+            "type": "string"
+          },
+          "record.id": {
+            "type": "string"
+          },
+          "company": {
+            "type": "string"
+          },
+          "fields": {
+            "type": "object",
+            "properties": {
+              "DEBIT.WALLET.AC.ID": {
+                "type": "string"
+              },
+              "MSG.ID": {
+                "type": "string"
+              },
+              "PMTINF.ID": {
+                "type": "string"
+              },
+              "PMTMTHD": {
+                "type": "string"
+              },
+              "REQDEXCTNDT": {
+                "type": "string"
+              },
+              "TXN.TYPE": {
+                "type": "string"
+              },
+              "DEBIT.NAME": {
+                "type": "string"
+              },
+              "DEBIT.ACCOUNT": {
+                "type": "string"
+              },
+              "DEBIT.AMOUNT": {
+                "type": "string"
+              },
+              "DEBIT.CURRENCY": {
+                "type": "string"
+              },
+              "CREDIT.NAME": {
+                "type": "string"
+              },
+              "CREDIT.CURRENCY": {
+                "type": "string"
+              },
+              "CREDIT.ACCOUNT": {
+                "type": "string"
+              },
+              "CREDIT.AMOUNT": {
+                "type": "string"
+              },
+              "TXN.DATE": {
+                "type": "string"
+              },
+              "CREDIT.WALLET.AC.ID": {
+                "type": "string"
+              },
+              "TXN.HASH": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "DEBIT.WALLET.AC.ID",
+              "MSG.ID",
+              "PMTINF.ID",
+              "PMTMTHD",
+              "REQDEXCTNDT",
+              "TXN.TYPE",
+              "DEBIT.NAME",
+              "DEBIT.ACCOUNT",
+              "DEBIT.AMOUNT",
+              "DEBIT.CURRENCY",
+              "CREDIT.NAME",
+              "CREDIT.CURRENCY",
+              "CREDIT.ACCOUNT",
+              "CREDIT.AMOUNT",
+              "TXN.DATE",
+              "CREDIT.WALLET.AC.ID",
+              "TXN.HASH"
+            ]
+          }
+        },
+        "required": [
+          "application",
+          "function",
+          "operation",
+          "no.of.auth",
+          "record.id",
+          "company",
+          "fields"
+        ]
+      }
+    },
+    "required": [
+      "sequence",
+      "action",
+      "un",
+      "pw",
+      "parameters"
+    ]
+  }

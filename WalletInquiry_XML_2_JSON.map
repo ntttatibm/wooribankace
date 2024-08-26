@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0">
+    <input path="/xmloutput.xsd"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var3"/>
+    <output derivedFrom="MB:JSON_schema_in_json_file" path="/WalletInquiryOutput.schema.json" var="var2"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="WalletInquiry_XML_2_JSON">
+        <input path="mb:msg(Document,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_Document"/>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var3/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly">
+            <cast derivedFrom="MB:JSON_TYPE" path="$MessageAssembly/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}WalletInquiryOutput.schema_JsonType" ref="var2"/>
+        </output>
+        <move>
+            <input path="$ComIbmMessageAssembly_Document/Properties"/>
+            <output path="$MessageAssembly/Properties"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_Document/Document/BizDate"/>
+            <output path="$MessageAssembly/JSON/spath('Data',2)/BizDate"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_Document/Document/BizTime"/>
+            <output path="$MessageAssembly/JSON/spath('Data',2)/BizTime"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_Document/Document/myBankID"/>
+            <output path="$MessageAssembly/JSON/spath('Data',2)/myBankID"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_Document/Document/BakongAccountUSD"/>
+            <output path="$MessageAssembly/JSON/spath('Data',2)/BakongAccountUSD"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_Document/Document/BakongAccountKHR"/>
+            <output path="$MessageAssembly/JSON/spath('Data',2)/BakongAccountKHR"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_Document/Document/BakongBalanceUSD"/>
+            <output path="$MessageAssembly/JSON/spath('Data',2)/BakongBalanceUSD"/>
+        </move>
+        <move>
+            <input path="$ComIbmMessageAssembly_Document/Document/BakongBalanceKHR"/>
+            <output path="$MessageAssembly/JSON/spath('Data',2)/BakongBalanceKHR"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

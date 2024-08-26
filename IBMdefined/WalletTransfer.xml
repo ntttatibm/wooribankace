@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://webservice.nbc.org.kh/"
+           xmlns:ns3="http://webservice.nbc.org.kh/"
+           elementFormDefault="qualified">
+
+    <xs:element name="Envelope">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Body">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="makeWalletTransfer">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="cm_user_name" type="xs:string"/>
+                                        <xs:element name="cm_password" type="xs:string"/>
+                                        <xs:element name="iso_message" type="xs:string"/>
+                                        <xs:element name="ext_ref" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0">
+    <inlinedXMLSchema>
+        <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+       
+  <xsd:element name="str_bk_pg_txn_datetime" nillable="true" type="xsd:string"/> 
+       
+  <xsd:element name="str_bk_pg_ft_id" nillable="true" type="xsd:string"/> 
+       
+  <xsd:element name="str_bk_pg_msg_id" nillable="true" type="xsd:string"/> 
+       
+  <xsd:element name="str_bk_pg_resp_message" nillable="true" type="xsd:string"/> 
+       
+  <xsd:element name="str_bk_pg_resp_code" nillable="true" type="xsd:string"/> 
+   
+</xsd:schema> 
+]]>
+    </inlinedXMLSchema>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var2"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var1"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="WalletTransfer_Response_Compute">
+        <input namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties)" var="ComIbmMessageAssembly_JSON">
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var"/>
+        </input>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var1/mb:msg(JSON,assembly,JSON,Properties)" var="ComIbmMessageAssembly_JSON1">
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON1/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var1"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/any" qualifier="str_bk_pg_resp_code" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/any" qualifier="str_bk_pg_resp_message" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/any" qualifier="str_bk_pg_msg_id" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/any" qualifier="str_bk_pg_ft_id" ref="var2"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/any" qualifier="str_bk_pg_txn_datetime" ref="var2"/>
+        </output>
+        <move>
+            <input path="$ComIbmMessageAssembly_JSON/Properties"/>
+            <output path="$ComIbmMessageAssembly_JSON1/Properties"/>
+        </move>
+        <assign value="Successful">
+            <output path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/str_bk_pg_resp_message"/>
+        </assign>
+        <assign value="null">
+            <output path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/str_bk_pg_msg_id"/>
+        </assign>
+        <assign value="FT2418796JN1">
+            <output path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/str_bk_pg_ft_id"/>
+        </assign>
+        <assign value="2407041610">
+            <output path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/str_bk_pg_txn_datetime"/>
+        </assign>
+        <assign value="BK-00">
+            <output path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/str_bk_pg_resp_code"/>
+        </assign>
+    </mappingDeclaration>
+</mappingRoot>

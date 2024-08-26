@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "BizDate": {
+      "type": "string"
+    },
+    "BizTime": {
+      "type": "string"
+    },
+    "myBankID": {
+      "type": "string"
+    },
+    "BakongAccountUSD": {
+      "type": "string"
+    },
+    "BakongAccountKHR": {
+      "type": "string"
+    },
+    "BakongBalanceUSD": {
+      "type": "string"
+    },
+    "BakongBalanceKHR": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "BizDate",
+    "BizTime",
+    "myBankID",
+    "BakongAccountUSD",
+    "BakongAccountKHR",
+    "BakongBalanceUSD",
+    "BakongBalanceKHR"
+  ]
+}

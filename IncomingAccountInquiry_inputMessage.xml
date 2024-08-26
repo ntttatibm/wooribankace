@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessagePool xmlns="http://wwww.ibm.com/iib/test/1.0.0">
+    <InputMessage timestamp="1723699864342" nodeId="FCMComposite_1_1" name="account_no" id="1723699864342-12">
+        <plainText>%7B%0D%0A++%22account_no%22%3A+%22251111168%22%0D%0A%7D</plainText>
+    </InputMessage>
+    <InputMessage timestamp="1724129332331" nodeId="FCMComposite_1_1" name="new message 1" id="1724129332330-8">
+        <plainText>%7B%0D%0A%09%22sequence%22%3A+123456%2C%0D%0A%09%22result%22%3A+%7B%0D%0A%09%09%22ret_code%22%3A+0%2C%0D%0A%09%09%22ret_message%22%3A+%22%22%2C%0D%0A%09%09%22description%22%3A+%22%22%2C%0D%0A%09%09%22header%22%3A+%5B%0D%0A%09%09%09%5B%22%40ID%22%5D%2C%0D%0A%09%09%09%5B%22ACCOUNT.NUMBER%22%5D%2C%0D%0A%09%09%09%5B%22ACCOUNT.TITLE.1%22%5D%2C%0D%0A%09%09%09%5B%22CURRENCY%22%5D%2C%0D%0A%09%09%09%5B%22CATEGORY%22%5D%2C%0D%0A%09%09%09%5B%22CUST.KYC%22%5D%0D%0A%09%09%5D%2C%0D%0A%09%09%22report%22%3A+%5B%0D%0A%09%09%09%5B%0D%0A%09%09%09%09%221%22%2C%0D%0A%09%09%09%09%222%22%2C%0D%0A%09%09%09%09%223%22%2C%0D%0A%09%09%09%09%224%22%2C%0D%0A%09%09%09%09%225%22%2C%0D%0A%09%09%09%09%226%22%2C%0D%0A%09%09%09%09%227%22%0D%0A%09%09%09%5D%0D%0A%09%09%5D%0D%0A%09%7D%0D%0A%7D</plainText>
+    </InputMessage>
+</MessagePool>

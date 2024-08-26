@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0">
+    <inlinedXMLSchema>
+        <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+    
+     
+      
+       
+        
+         
+             
+                
+                   
+             
+                  
+     
+    
+   
+  <xsd:element name="str_participant_code" nillable="true" type="xsd:string"/> 
+    
+     
+      
+          
+     
+    
+       
+      
+       
+        
+         
+         
+      
+     
+    
+   
+  
+ 
+</xsd:schema> 
+]]>
+    </inlinedXMLSchema>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var2"/>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var1"/>
+    <output path="/NBCInterface_InlineSchema1.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="WalletInquiry_Mapping">
+        <input namespace="http://www.ibm.com/iib/msl/json" path="$var1/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly">
+            <cast castType="userDefined" path="$MessageAssembly/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var1"/>
+            <cast castType="userDefined" path="$MessageAssembly/JSON/spath('Data',2)/any" qualifier="str_participant_code" ref="var2"/>
+        </input>
+        <output namespace="http://webservice.nbc.org.kh/" path="mb:msg(getAccountInquiry,assembly,XMLNSC,Properties)" var="MessageAssembly1"/>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/str_participant_code[1]"/>
+            <output path="$MessageAssembly1/getAccountInquiry/participant_code"/>
+        </move>
+        <assign>
+            <output path="$MessageAssembly1/getAccountInquiry/cm_user_name"/>
+        </assign>
+        <assign>
+            <output path="$MessageAssembly1/getAccountInquiry/cm_password"/>
+        </assign>
+        <move>
+            <input path="$MessageAssembly/Properties"/>
+            <output path="$MessageAssembly1/Properties"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

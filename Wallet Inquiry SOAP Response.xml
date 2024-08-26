@@ -1,0 +1,8 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+      <ns2:getAccountInquiryResponse xmlns:ns2="http://webservice.nbc.org.kh/">
+         <ns2:return><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Document><BizDate>2024-07-04</BizDate><BizTime>07:12:01</BizTime><myBankID>WBFMKHPPXXX</myBankID><BakongAccountUSD>usd#nbc</BakongAccountUSD><BakongAccountKHR>khr#nbc</BakongAccountKHR><BakongBalanceUSD>7155813.50</BakongBalanceUSD><BakongBalanceKHR>12369498.40</BakongBalanceKHR></Document>]]></ns2:return>
+      </ns2:getAccountInquiryResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

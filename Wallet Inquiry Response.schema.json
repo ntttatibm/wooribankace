@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "BizDate": {
+      "type": "string",
+      "minLength": 1
+    },
+    "BizTime": {
+      "type": "string",
+      "minLength": 1
+    },
+    "myBankID": {
+      "type": "string",
+      "minLength": 1
+    },
+    "BakongAccountUSD": {
+      "type": "string",
+      "minLength": 1
+    },
+    "BakongAccountKHR": {
+      "type": "string",
+      "minLength": 1
+    },
+    "BakongBalanceUSD": {
+      "type": "number",
+      "minLength": 1
+    },
+    "BakongBalanceKHR": {
+      "type": "number",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "BizDate",
+    "BizTime",
+    "myBankID",
+    "BakongAccountUSD",
+    "BakongAccountKHR",
+    "BakongBalanceUSD",
+    "BakongBalanceKHR"
+  ]
+}
